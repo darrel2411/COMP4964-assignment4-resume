@@ -1,14 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Darrel Tapilaha — Resume</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="Resume site for Darrel Tapilaha — BCIT CST student focused on DevOps, AWS, and full-stack development." />
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div>
+                <h1 class="name">Darrel Tapilaha</h1>
+                <p class="tagline">BCIT CST • Full-stack • AWS</p>
+            </div>
+            <nav class="header-actions">
+                <a class="btn" href="assets/Resume Darrel Tapilaha.pdf" target="_blank" rel="noopener">View PDF</a>
+                <a class="btn btn-outline" href="assets/Resume Darrel Tapilaha.pdf" download>Download</a>
+            </nav>
+        </div>
+    </header>
 
+    <main class="container">
+        <section class="card">
+            <h2>About</h2>
+            <p>
+                I’m a Computer Systems Technology student at the British Columbia Institute of Technology (BCIT), passionate about full-stack development and
+                cloud computing. My technical experience spans Java, JavaScript, Python, and Kotlin, with hands-on skills in AWS services like EC2, S3,
+                DynamoDB, and Cognito.
+            </p>
+        </section>
+        <section class="grid">
+            <div class="card">
+                <h2>Skills</h2>
+                <ul class="pill-list">
+                    <li>AWS (EC2, S3, Lambda, DynamoDB, Cognito, CodePipeline/Build)</li>
+                    <li>Docker • Git & GitHub</li>
+                    <li>JavaScript/TypeScript • React • Node.js</li>
+                    <li>Python (FastAPI) • SQL/NoSQL</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Projects</h2>
+                <ul class="list">
+                    <li><strong>ReloCash</strong> — Classifieds app (Cognito, DynamoDB, S3, Node/Express).</li>
+                    <li><strong>Stocky AI</strong> — POS integration platform (FastAPI, SQLAlchemy, AWS).</li>
+                    <li><strong>BirdQuest</strong> — AI bird “Pokedex” (React + image models).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Contact</h2>
+            <ul class="contact">
+                <li>Email: <a href="mailto:dtapilaha@my.bcit.ca">dtapilaha@my.bcit.ca</a></li>
+                <li>GitHub: <a href="https://github.com/darrel2411" target="_blank" rel="noopener">github.com/darrel2411</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/darrel-giovanni-tapilaha" target="_blank"
+                        rel="noopener">linkedin.com/in/darrel-giovanni-tapilaha</a></li>
+            </ul>
+            <!-- <p class="note">This site deploys automatically with AWS CodePipeline → CodeBuild → S3.</p> -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <small>© <span id="year"></span> Darrel Tapilaha</small>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
