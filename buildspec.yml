@@ -1,13 +1,14 @@
 version: 0.2
+
 phases:
-  install:
-    commands:
-      - echo "deploy static website to S3."
   build:
     commands:
-      - echo "building artifact from resume-site."
+      - echo "Static site: nothing to build."
+
 artifacts:
   files:
-    - **/*
+    - index.html
+    - style.css
+    - assets/**/*
   name: website
   discard-paths: no
