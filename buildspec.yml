@@ -1,17 +1,13 @@
 version: 0.2
 
-env:
-  variables:
-    WEBSITE_BUCKET: assignment4-resume
-
 phases:
   install:
     commands:
-      - echo "Using AWS CLI v2 to deploy static site to S3: $WEBSITE_BUCKET"
+      - echo "Using AWS CLI v2 to deploy static site to S3"
   build:
     commands:
       - echo "Syncing to S3 bucket..."
-      - aws s3 sync . s3://$WEBSITE_BUCKET --delete \
+      - aws s3 sync . s3://$assignment4-resume --delete \
         --exclude ".git/*" \
         --exclude ".github/*" \
         --exclude "buildspec.yml" \
